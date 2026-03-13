@@ -157,7 +157,7 @@ fn post_update_hooks(is_root: bool) {
     let mut input = String::new();
     io::stdin().read_line(&mut input).unwrap();
     if input.trim().eq_ignore_ascii_case("y") {
-        run("cfg-update -a", false, is_root);
+        run("cfg-update -u", false, is_root);
         run("eclean-dist -d", false, is_root);
     }
 }
